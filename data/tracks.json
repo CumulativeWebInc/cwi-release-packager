@@ -1,0 +1,370 @@
+{
+ "records": [
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_01",
+   "isrc": "QZ8EF2666377",
+   "isrc_status": "verified",
+   "title": "Diabolique"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_02",
+   "isrc": "QZDA72377312",
+   "isrc_status": "verified",
+   "title": "Spirits n Shadows"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_03",
+   "isrc": "QZMEP2461120",
+   "isrc_status": "verified",
+   "title": "Painted Lady"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_04",
+   "isrc": "QZMEP2456963",
+   "isrc_status": "verified",
+   "title": "Flamerz"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_05",
+   "isrc": "QZMEM2484571",
+   "isrc_status": "verified",
+   "title": "Ultimate"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_06",
+   "isrc": "QZWFE2309934",
+   "isrc_status": "verified",
+   "title": "Toxic Element"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_07",
+   "isrc": "QZTB82306781",
+   "isrc_status": "verified",
+   "title": "7th Angel"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_08",
+   "isrc": "QZDA72377313",
+   "isrc_status": "verified",
+   "title": "Phantasm"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_09",
+   "isrc": null,
+   "isrc_status": "conflicted",
+   "title": "Golden Diamond"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_10",
+   "isrc": "QZHN32303575",
+   "isrc_status": "verified",
+   "title": "Flex My Flame"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_11",
+   "isrc": "QZES92391782",
+   "isrc_status": "verified",
+   "title": "Broken Hearts Club"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_12",
+   "isrc": "QZDA52303345",
+   "isrc_status": "verified",
+   "title": "Zooted Zone"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_13",
+   "isrc": "QZTB92246281",
+   "isrc_status": "verified",
+   "title": "Neon Nights Pt. 777"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_14",
+   "isrc": "QZTB72282572",
+   "isrc_status": "verified",
+   "title": "Doves & Diamonds"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_15",
+   "isrc": null,
+   "isrc_status": "conflicted",
+   "title": "Shaka Zulu"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_16",
+   "isrc": "QZDA62200554",
+   "isrc_status": "verified",
+   "title": "Warped & Wicked"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_17",
+   "isrc": "QZDA62200555",
+   "isrc_status": "verified",
+   "title": "Warped & Wicked (Radio Edit)"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_18",
+   "isrc": "QZF222243412",
+   "isrc_status": "verified",
+   "title": "Rainbows And Roses"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_19",
+   "isrc": "QZF222243413",
+   "isrc_status": "verified",
+   "title": "Rainbows And Roses (Instrumental)"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_20",
+   "isrc": "QZDA52227918",
+   "isrc_status": "verified",
+   "title": "Place I Go to Dream (Remastered)"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_21",
+   "isrc": "QZDA52227919",
+   "isrc_status": "verified",
+   "title": "Place I Go to Dream (Instrumental)"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_22",
+   "isrc": "QZDA72377310",
+   "isrc_status": "verified",
+   "title": "Scorpions & Sapphires"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_23",
+   "isrc": "QZDA72377309",
+   "isrc_status": "verified",
+   "title": "Tears and Scars"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_24",
+   "isrc": "QZDA72377311",
+   "isrc_status": "verified",
+   "title": "Smokin' Pain"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_25",
+   "isrc": "QZDA72377314",
+   "isrc_status": "verified",
+   "title": "Misfits and Hooligans"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_26",
+   "isrc": "QZDA72377315",
+   "isrc_status": "verified",
+   "title": "Roses over Monaco"
+  },
+  {
+   "artist": "That Boy Hi Hat",
+   "id": "trk_27",
+   "isrc": null,
+   "isrc_status": "unverified",
+   "title": "piv-ot-al"
+  },
+  {
+   "artist": "Black Lansky",
+   "id": "trk_28",
+   "isrc": "QZTB92317688",
+   "isrc_status": "verified",
+   "title": "tiempo"
+  },
+  {
+   "artist": "Black Lansky",
+   "id": "trk_29",
+   "isrc": "QZTAU2364938",
+   "isrc_status": "verified",
+   "title": "LOFI 2.0"
+  },
+  {
+   "artist": "Black Lansky",
+   "id": "trk_30",
+   "isrc": "QZES72391652",
+   "isrc_status": "verified",
+   "title": "Skateboard Team Sports"
+  },
+  {
+   "artist": "Black Lansky",
+   "id": "trk_31",
+   "isrc": "QZES82338847",
+   "isrc_status": "verified",
+   "title": "Retro Vibe"
+  },
+  {
+   "artist": "Black Lansky",
+   "id": "trk_32",
+   "isrc": "QZES72321863",
+   "isrc_status": "verified",
+   "title": "Viral Beats"
+  },
+  {
+   "artist": "Black Lansky",
+   "id": "trk_33",
+   "isrc": "QZTAZ2200862",
+   "isrc_status": "verified",
+   "title": "Mosh Pit"
+  },
+  {
+   "artist": "Black Lansky",
+   "id": "trk_34",
+   "isrc": "QZTAZ2200863",
+   "isrc_status": "verified",
+   "title": "Allegience"
+  },
+  {
+   "artist": "Black Lansky",
+   "id": "trk_35",
+   "isrc": "QZTAZ2200864",
+   "isrc_status": "verified",
+   "title": "Give It All"
+  },
+  {
+   "artist": "Black Lansky",
+   "id": "trk_36",
+   "isrc": "QZTAZ2200865",
+   "isrc_status": "verified",
+   "title": "Do it to me"
+  },
+  {
+   "artist": "Black Lansky",
+   "id": "trk_37",
+   "isrc": "QZTAZ2200866",
+   "isrc_status": "verified",
+   "title": "Streets Again"
+  },
+  {
+   "artist": "Black Lansky",
+   "id": "trk_38",
+   "isrc": null,
+   "isrc_status": "unverified",
+   "title": "Sync Ready Tracks"
+  },
+  {
+   "artist": "King Akeem",
+   "id": "trk_39",
+   "isrc": "QZHN32363436",
+   "isrc_status": "verified",
+   "title": "Star"
+  },
+  {
+   "artist": "King Akeem",
+   "id": "trk_40",
+   "isrc": "QZTB62301270",
+   "isrc_status": "verified",
+   "title": "Super Solid"
+  },
+  {
+   "artist": "King Akeem",
+   "id": "trk_41",
+   "isrc": "QZNWW2269584",
+   "isrc_status": "verified",
+   "title": "Embiid"
+  },
+  {
+   "artist": "King Akeem",
+   "id": "trk_42",
+   "isrc": "QZHN32388169",
+   "isrc_status": "verified",
+   "title": "Bluefaces 3.0"
+  },
+  {
+   "artist": "King Akeem",
+   "id": "trk_43",
+   "isrc": "QZMEP2445736",
+   "isrc_status": "verified",
+   "title": "Goated"
+  },
+  {
+   "artist": "King Akeem",
+   "id": "trk_44",
+   "isrc": "QZHN42322704",
+   "isrc_status": "verified",
+   "title": "Element"
+  },
+  {
+   "artist": "King Akeem",
+   "id": "trk_45",
+   "isrc": "QZTB62312853",
+   "isrc_status": "verified",
+   "title": "Summer Night FAST"
+  },
+  {
+   "artist": "183 Wildboi",
+   "id": "trk_46",
+   "isrc": "QZMEP2463049",
+   "isrc_status": "verified",
+   "title": "Stunt"
+  },
+  {
+   "artist": "183 Wildboi",
+   "id": "trk_47",
+   "isrc": "QZNWS2289104",
+   "isrc_status": "verified",
+   "title": "Full Moon"
+  },
+  {
+   "artist": "Dre50",
+   "id": "trk_48",
+   "isrc": "QZFYZ2531105",
+   "isrc_status": "verified",
+   "title": "Pix"
+  },
+  {
+   "artist": "Fleekz",
+   "id": "trk_49",
+   "isrc": "QZDA52309060",
+   "isrc_status": "verified",
+   "title": "2K23 Corner$ (feat. That Boy Hi Hat)"
+  },
+  {
+   "artist": "Fleekz",
+   "id": "trk_50",
+   "isrc": "QZK6L2263080",
+   "isrc_status": "verified",
+   "title": "2k23 Corners"
+  },
+  {
+   "artist": "GregPorn",
+   "id": "trk_51",
+   "isrc": null,
+   "isrc_status": "unverified",
+   "title": "On Edge"
+  },
+  {
+   "artist": "GregPorn",
+   "id": "trk_52",
+   "isrc": null,
+   "isrc_status": "unverified",
+   "title": "Pay Yourself"
+  }
+ ],
+ "schema": "cwi.release-track/1.0",
+ "source": "cwi-company/catalog-interop/catalog-index.json (built 2026-09-19; 52 tracks: 8 silver, 44 bronze; 2 conflicted ISRCs, 4 missing ISRCs). Snapshot only — re-verify against the live index before shipping a release."
+}
