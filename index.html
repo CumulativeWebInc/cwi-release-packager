@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Release Asset Packager — CWI Distributor Deliverable Gate</title>
+<meta name="description" content="Assemble a distributor deliverable bundle for any CWI catalog track. Fails CLOSED (red gate) on missing or conflicted ISRCs — a release can never ship past it without its identifier.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","applicationCategory":"BusinessApplication","author":{"@type":"Organization","name":"Cumulative Web Inc"},"description":"Distributor deliverable bundle builder: given a track, release date and asset attestations, it runs the identifier + metadata gate and fails closed on missing or conflicted ISRCs.","name":"CWI Release Asset Packager","operatingSystem":"Web","url":"https://cumulativewebinc.github.io/cwi-release-packager/"}</script>
+<style>
+:root{--bg:#0b0e14;--panel:#141a26;--line:#263046;--txt:#e8ecf4;--mut:#9aa7c2;--pass:#3ddc84;--fail:#ff5d5d;--warn:#ffb84d;--acc:#6ee7ff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:16px}
+header{display:flex;gap:14px;align-items:center;padding:18px 0;border-bottom:1px solid var(--line)}
+header img{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--acc)}
+h1{font-size:1.35rem;margin:0}h1 small{display:block;font-size:.8rem;color:var(--mut);font-weight:400}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.badge{border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.8rem;color:var(--mut)}
+.badge b{color:var(--txt)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px;margin:16px 0}
+label{display:block;font-size:.85rem;color:var(--mut);margin:12px 0 6px}
+select,input[type=date],input[type=text]{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--txt);font-size:1rem}
+.checkline{display:flex;gap:10px;align-items:flex-start;margin:12px 0;font-size:.95rem}
+.checkline input{margin-top:4px}
+button.big{width:100%;padding:14px;border:0;border-radius:12px;background:var(--acc);color:#04222b;font-weight:800;font-size:1.05rem;cursor:pointer;margin-top:14px}
+button.big:hover{filter:brightness(1.08)}
+.gate{border-radius:14px;padding:18px;margin:16px 0;border:2px solid var(--line);font-weight:700}
+.gate.PASS{border-color:var(--pass);background:rgba(61,220,132,.08)}
+.gate.FAIL{border-color:var(--fail);background:rgba(255,93,93,.08)}
+.gate .word{font-size:1.5rem;letter-spacing:.06em}
+.gate.PASS .word{color:var(--pass)}.gate.FAIL .word{color:var(--fail)}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:.9rem}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mut);font-weight:600;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.pill{display:inline-block;border-radius:999px;padding:2px 10px;font-size:.75rem;font-weight:700;letter-spacing:.03em}
+.pill.PASS{background:rgba(61,220,132,.14);color:var(--pass);border:1px solid var(--pass)}
+.pill.FAIL{background:rgba(255,93,93,.14);color:var(--fail);border:1px solid var(--fail)}
+.pill.WARN{background:rgba(255,184,77,.14);color:var(--warn);border:1px solid var(--warn)}
+.truth{font-size:.72rem;color:var(--mut);border:1px dashed var(--line);border-radius:999px;padding:1px 8px;white-space:nowrap}
+.honest{background:#101724;border:1px dashed var(--warn);border-radius:12px;padding:14px 16px;margin:16px 0;font-size:.9rem;color:var(--mut)}
+.honest b{color:var(--warn)}
+.cta{background:linear-gradient(135deg,#0e2a33,#132c3f);border:1px solid var(--acc);border-radius:14px;padding:18px;margin:18px 0;text-align:center}
+.cta a{display:inline-block;background:var(--acc);color:#04222b;font-weight:800;border-radius:999px;padding:10px 26px;text-decoration:none;margin-top:10px}
+footer{color:var(--mut);font-size:.8rem;padding:18px 0 28px;border-top:1px solid var(--line)}
+@media(max-width:560px){h1{font-size:1.1rem}th:nth-child(3),td:nth-child(3){display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<img src="brand/cwi-logo.jpg" alt="Cumulative Web Inc logo">
+<div>
+<h1>Release Asset Packager <small>Distributor deliverable bundle builder — fails closed on missing or conflicted ISRCs</small></h1>
+</div>
+</header>
+
+<div class="badges">
+<span class="badge"><b>52</b> catalog tracks</span>
+<span class="badge"><b>46</b> ISRC VERIFIED</span>
+<span class="badge"><b>2</b> conflicted</span>
+<span class="badge"><b>4</b> missing ISRC</span>
+<span class="badge">T-6wk freeze window</span>
+<span class="badge">schema cwi.release-bundle/1.0</span>
+</div>
+
+<div class="card">
+<label for="track">Track</label>
+<select id="track"></select>
+<label for="rdate">Release date</label>
+<input type="date" id="rdate">
+<label for="upc">UPC (optional — distributors can assign one)</label>
+<input type="text" id="upc" placeholder="e.g. 198000000000">
+<div class="checkline">
+<input type="checkbox" id="art">
+<label for="art" style="margin:0">I attest the cover art meets spec: 3000×3000 px, RGB, no blur/pixelation, no URL watermarks. (Self-declared — this tool does not inspect the file.)</label>
+</div>
+<button class="big" id="build">Build deliverable bundle</button>
+</div>
+
+<div id="out"></div>
+
+<div class="honest">
+<b>Honest limits.</b> ISRC statuses come from a <b>2026-09-19 snapshot</b> of the CWI catalog-index (52 tracks: 8 silver, 44 bronze; 2 conflicted, 4 missing) — re-verify against the live index before shipping any release; this snapshot goes STALE after 60 days. Cover art is <b>user-attested</b>, never inspected. UPC is self-declared. This tool assembles the deliverable bundle — it is <b>not</b> a distributor submission.
+</div>
+
+<div class="cta">
+<div style="font-weight:800">Bundle green? Plan the rollout.</div>
+<div style="color:var(--mut);font-size:.9rem">Feed the Release Timeline Automator and hit every T-6wk → release-day checkpoint.</div>
+<a href="https://cumulativewebinc.github.io/cwi-release-timeline/">Try the Release Timeline Automator →</a>
+</div>
+
+<footer>Cumulative Web Inc · Release Asset Packager v1.0.0 · zero-dep UMD engine (browser + Node) · Machine-readable: <a href="data/tracks.json">data/tracks.json</a> · <a href="bundle.schema.json">bundle.schema.json</a> · <a href="content.json">content.json</a> · <a href="llms.txt">llms.txt</a> · <a href=".well-known/agent-card.json">agent card</a><br>Kill rule: snapshot older than 60 days is flagged STALE; zero re-verified catalog-index syncs per 60 days → retire.</footer>
+</div>
+
+<script src="release-packager.js"></script>
+<script>
+fetch('data/tracks.json').then(r=>r.json()).then(doc=>{
+  const sel=document.getElementById('track');
+  doc.records.forEach(t=>{
+    const o=document.createElement('option');
+    o.value=t.id;
+    o.textContent=t.artist+' — '+t.title+(t.isrc_status!=='verified'?'  ['+t.isrc_status.toUpperCase()+']':'');
+    sel.appendChild(o);
+  });
+  document.getElementById('build').onclick=()=>{
+    const t=doc.records.find(x=>x.id===sel.value);
+    const b=CWIReleasePackager.buildBundle(t,{
+      releaseDate:document.getElementById('rdate').value||undefined,
+      upc:document.getElementById('upc').value||undefined,
+      coverArtAttested:document.getElementById('art').checked
+    });
+    const rows=b.checks.map(c=>'<tr><td><span class="pill '+c.status+'">'+c.status+'</span></td><td>'+c.detail.replace(/</g,'&lt;')+'<br><span class="truth">'+c.truth+'</span></td></tr>').join('');
+    document.getElementById('out').innerHTML=
+      '<div class="gate '+b.gate+'"><div class="word">'+(b.gate==='PASS'?'✓ BUNDLE SHIPPABLE':'✕ RED GATE — CANNOT SHIP')+'</div><div style="font-weight:400;margin-top:6px">'+b.gate_note.replace(/</g,'&lt;')+'</div></div>'+
+      '<div class="card"><h2 style="margin:0 0 8px;font-size:1.05rem">Checks</h2><table><tr><th>Check</th><th>Result</th></tr>'+rows+'</table>'+
+      '<button class="big" id="dl" style="margin-top:14px">Download bundle.json</button></div>';
+    document.getElementById('dl').onclick=()=>{
+      const blob=new Blob([JSON.stringify(b,null,2)],{type:'application/json'});
+      const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='release-bundle-'+b.track_id+'.json';a.click();
+    };
+  };
+}).catch(e=>{document.getElementById('out').innerHTML='<div class="honest"><b>Load error:</b> could not read data/tracks.json — '+String(e).replace(/</g,'&lt;')+'</div>';});
+</script>
+</body>
+</html>
