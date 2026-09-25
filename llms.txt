@@ -1,0 +1,22 @@
+# Release Asset Packager — CWI Distributor Deliverable Gate
+
+Given a track, release date, and asset attestations, this assembles the distributor deliverable bundle and **fails CLOSED** (red gate) on missing or conflicted ISRCs. A release can never ship past it without its identifier. Feeds the Release Timeline Automator's T-6wk checkpoint.
+
+## Machine-readable endpoints
+- /data/tracks.json — 52 catalog tracks, schema cwi.release-track/1.0 (title, artist, isrc, isrc_status; 46 verified, 2 conflicted, 4 missing). Snapshot of the 2026-09-19 catalog-index.
+- /bundle.schema.json — JSON Schema for cwi.release-bundle/1.0
+- /release-packager.js — zero-dep UMD bundle engine (browser + Node)
+- /cli/build.js — Node CLI: `node cli/build.js <track-id> [--release-date YYYY-MM-DD] [--cover-attested] [--upc CODE]`
+
+## Gate rules
+- Hard (block the bundle): title present, artist present, ISRC present, ISRC status verified, ISRC format valid.
+- Soft (WARN, never block): cover art attested, UPC supplied, T-6wk distributor freeze window.
+
+## Truth labels
+VERIFIED = checked against the catalog-index snapshot. USER-ATTESTED = packager self-declared (cover art). UNVERIFIED = everything else.
+
+## Kill rule
+Snapshot older than 60 days is flagged STALE; zero re-verified catalog-index syncs per 60 days → retire.
+
+## Source
+https://github.com/CumulativeWebInc/cwi-release-packager — Cumulative Web Inc, MIT-0. Tests: 18/18 node --test green.
